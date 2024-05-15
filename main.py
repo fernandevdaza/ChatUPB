@@ -20,7 +20,8 @@ message = client.beta.threads.messages.create(
 #configurar cuidadosamente los tokens, para evitar gastos innecesarios
 run = client.beta.threads.runs.create(
   thread_id=thread.id,
-  assistant_id='asst_MhFtFuc1soGd9eItosYv64BY',
+  #id del asistente
+  assistant_id=config.get("ASSISTANT_ID"),
   max_prompt_tokens=50,
   max_completion_tokens=50,
 )
